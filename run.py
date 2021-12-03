@@ -8,11 +8,13 @@ import json
 import sys
 import os
 
+# capture target
 try:
     target = sys.argv[1].lower()
 except:
     target = None
 
+# clean produced files
 if target == 'clean':
     created_files = [
         'test/out/test_results.json',
@@ -61,7 +63,7 @@ if target != 'clean':
     X_train, y_train, X_test, y_test = prepare_data(train_X, train_y, test_X, test_y, num_train, num_test, num_classes)
     results = {}
 
-# setup distance matrices
+# only setup distance matrices
 if target == 'build':
     fp = 'logs/distance_matrices'
     
@@ -74,7 +76,8 @@ if target == 'build':
         D_test = distance_matrix(X_test, X_train)
         with open(os.path.join(fp, 'D_test.pickle'), 'wb') as f:
             pickle.dump(D_test, f)
-        
+
+# setup distance matrices        
 elif target != 'clean':
     fp = 'logs/distance_matrices'
     if os.path.exists(fp + '/D.pickle') and target != 'test':
