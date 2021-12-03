@@ -82,12 +82,16 @@ elif target != 'clean':
             D = pickle.load(f)
     else:
         D = distance_matrix(X_train, X_train)
+        with open(os.path.join(fp, 'D.pickle'), 'wb') as f:
+            pickle.dump(D, f)
         
     if os.path.exists(fp + '/D_test.pickle') and target != 'test':
         with open(os.path.join(fp, 'D_test.pickle'), 'rb') as f:
             D_test = pickle.load(f)
     else:
         D_test = distance_matrix(X_test, X_train)
+        with open(os.path.join(fp, 'D_test.pickle'), 'wb') as f:
+            pickle.dump(D_test, f)
 
 if target != 'build' and target != 'clean':
     # iterate through specified kernel types
