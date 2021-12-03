@@ -1,4 +1,4 @@
-Different combinations of kernels and noise can be run by modifying the `script-params.json` file found in the config folder. The modifiable tags are as follows:
+Different combinations of kernels and noise can be run by modifying the `script-params.json`. The modifiable tags are as follows:
 
 `num_train` : int - The number of datapoints to use in the training dataset
 
