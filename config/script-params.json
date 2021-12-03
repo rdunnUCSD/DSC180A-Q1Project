@@ -1,0 +1,10 @@
+{
+    "num_train": 10000,
+    "num_test": 10000,
+    "min_noise": 0,
+    "max_noise": 0.9,
+    "noise_step": 0.05,
+    "p_kernels": [2, 1, 0.5, 0.3333, 0.25, 0.2],
+    "c_modifiers": [1],
+    "num_classes": 10
+}
