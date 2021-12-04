@@ -135,5 +135,3 @@ if target != 'build' and target != 'clean':
     else:
         with open('out/results.json', 'w') as f:
             json.dump(results, f)
-
-# Run notebook visualization?
