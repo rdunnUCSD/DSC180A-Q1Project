@@ -1,4 +1,4 @@
-# DSC180A-Methodology-5
+# Label Corruptions in Kernel Machines
 
 Script for running different types of kernels with added label noise.
 
