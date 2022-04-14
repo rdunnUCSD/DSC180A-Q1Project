@@ -1,4 +1,4 @@
 {
-    "dockerhub-id": "",
+    "dockerhub-id": "rdunnucsd/dsc150a-methodology-5:latest",
     "build-script": "python run.py"
 }
